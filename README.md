@@ -1,60 +1,49 @@
-# 🛒 Blinkit Sales Analysis
+# 🛒 Blinkit Sales Analysis using SQL Server
 
 ## 📌 Project Overview
 
-This project performs **exploratory data analysis (EDA)** on a cleaned Blinkit grocery sales dataset using **SQL**. The goal is to generate business-focused insights about product categories, outlet performance, customer behavior, and sales trends.
+This project demonstrates a complete **data analytics pipeline using SQL Server** on Blinkit grocery sales data. It showcases the full process — from database setup, raw data loading, schema design, data transformation, quality checks, to final business-focused analysis using **T-SQL** in SQL Server Management Studio (SSMS).
 
 ---
 
 ## 🧠 Objective
 
-- Analyze grocery sales data for patterns and trends.
-- Provide actionable insights to improve inventory, sales strategy, and category performance.
-- Practice real-world SQL for data exploration and storytelling.
+- Design a multi-schema database system in SQL Server.
+- Ingest and transform raw sales data using T-SQL scripts and stored procedures.
+- Conduct data quality checks and cleanse the data.
+- Generate insights using exploratory SQL queries with a business focus.
 
 ---
 
-## 🔧 Tools & Technologies
+## 🧰 Tools & Technologies
 
-- **SQL (PostgreSQL / MySQL compatible)**
-- **DBMS**: PostgreSQL (can be run in BigQuery, MySQL, etc.)
-- **Platform**: GitHub for version control and portfolio
-- *(Optional for visualization: Power BI or Tableau)*
-
----
-
-## 🗂️ Dataset Details
-
-The analysis is performed on the following table:
-
-- `refined.blinkit_data` – preprocessed grocery sales data containing fields like:
-  - `order_id`
-  - `product_name`
-  - `category`
-  - `quantity`
-  - `price`
-  - `order_date`
-  - `outlet_name`
-
-> Note: The raw data has been cleaned and refined before this analysis. Raw and cleaning steps are not shown here.
+- **Database**: Microsoft SQL Server
+- **IDE**: SQL Server Management Studio (SSMS)
+- **Language**: T-SQL (Transact-SQL)
+- **Source Files**: CSV & Excel
+- **Version Control**: GitHub
 
 ---
 
-## 📊 Key Analysis Areas
-
-- 🔸 Top-selling product categories
-- 🔸 Sales performance by outlet
-- 🔸 Monthly sales trends
-- 🔸 Quantity and revenue heatmaps
-- 🔸 Price-sensitive product analysis
-
----
-
-## 📁 File Structure
+## 🗂️ Project Structure
 
 ```bash
-📦 blinkit-sales-analysis/
- ┣ 📄 exploratory_data_analysis.sql   # Main SQL analysis file
- ┣ 📄 README.md                        # Project overview
- ┗ 📄 [future files: visualizations, notes, etc.]
-
+📦 Blinkit Project/
+ ┣ 📂 dataset/
+ ┃ ┣ 📄 BlinkIT Grocery Data.csv
+ ┃ ┗ 📄 BlinkIT Grocery Data.xlsx
+ ┣ 📂 SQL/
+ ┃ ┗ 📂 scripts/
+ ┃   ┣ 📂 analysis/
+ ┃   ┃ ┣ 📄 data_quality_checks.sql
+ ┃   ┃ ┗ 📄 exploratory_data_analysis.sql
+ ┃   ┣ 📂 init/
+ ┃   ┃ ┗ 📄 init_database_and_schemas.sql
+ ┃   ┣ 📂 raw_schema/
+ ┃   ┃ ┣ 📄 ddl_raw_blinkit_data.sql
+ ┃   ┃ ┗ 📄 load_raw_blinkit_data.sql
+ ┃   ┣ 📂 refined_schema/
+ ┃   ┃ ┣ 📄 ddl_refined_blinkit_data.sql
+ ┃   ┃ ┗ 📄 clean_and_load_refined_data.sql
+ ┃   ┗ 📂 load_data/
+ ┃     ┗ 📄 sp_load_Blinkit_data.sql
